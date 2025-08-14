@@ -1,312 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vivari Assessoria Financeira</title>
-  <meta name="description" content="Vivari Assessoria Financeira – Consórcios de imóveis, automóveis, motocicletas e serviços. Parcerias com grandes empresas. Solicite sua cotação." />
-  <meta property="og:title" content="Vivari Assessoria Financeira" />
-  <meta property="og:description" content="Consórcios de imóveis, automóveis, motocicletas e serviços. Fale com a Vivari no WhatsApp ou solicite uma cotação." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#1db954" />
-
-  <!-- Fonte limpa -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --green:#1db954; /* ajuste se desejar casar 100% com o verde do seu logo */
-      --black:#000000;
-      --white:#ffffff;
-      --gray:#b5b5b5;
-      --card:#0f0f10;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--black);color:var(--white);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
-    a{color:var(--white);text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{width:min(1200px,92%);margin:0 auto}
-
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.8);backdrop-filter:saturate(150%) blur(6px);border-bottom:1px solid #161616}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo img{height:46px;width:auto}
-    .brand{line-height:1}
-    .brand .name{font-weight:800;letter-spacing:.5px}
-    .brand .sub{font-size:12px;color:var(--gray);margin-top:-2px}
-    .menu{display:flex;gap:22px;align-items:center}
-    .menu a{opacity:.9}
-    .menu a:hover{opacity:1}
-    .btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.12);transition:.2s;cursor:pointer}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:var(--green);color:#07170c;border-color:var(--green);font-weight:700}
-    .btn-ghost{background:transparent}
-
-    /* Hero */
-    .hero{padding:72px 0 56px;background:linear-gradient(180deg,rgba(29,185,84,.12),rgba(0,0,0,0) 40%)}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
-    .kicker{color:var(--green);font-weight:700;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
-    h1{font-size: clamp(28px, 4.4vw, 56px);margin:8px 0 12px;line-height:1.1}
-    .lead{color:#d7d7d7;font-size: clamp(14px, 1.6vw, 18px);max-width:60ch}
-    .cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
-    .hero-card{background:var(--card);padding:22px;border-radius:16px;border:1px solid #191919;box-shadow:0 8px 28px rgba(0,0,0,.35)}
-
-    /* Sections */
-    section{padding:64px 0;border-top:1px solid #101010}
-    h2{font-size: clamp(22px, 3.2vw, 36px);margin:0 0 10px}
-    .subhead{color:#c9c9c9;margin-bottom:26px}
-
-    /* Serviços */
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-4{grid-template-columns:repeat(4,1fr)}
-    @media (max-width: 960px){.hero-grid{grid-template-columns:1fr}.grid.cols-4{grid-template-columns:repeat(2,1fr)}.grid.cols-3{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width: 560px){.grid.cols-4,.grid.cols-3{grid-template-columns:1fr}}
-
-    .card{background:var(--card);padding:22px;border-radius:16px;border:1px solid #171717;transition:.2s}
-    .card:hover{transform:translateY(-2px);border-color:#222}
-    .card h3{margin:8px 0 6px;font-size:18px}
-    .card p{margin:0;color:#cfcfcf;font-size:14px}
-    .chip{display:inline-block;background:rgba(29,185,84,.14);color:var(--green);border:1px solid rgba(29,185,84,.35);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.04em}
-
-    /* Parcerias */
-    .partners{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;align-items:center}
-    .partners .p{background:#0b0b0c;border:1px dashed #1d1d1e;border-radius:12px;height:68px;display:flex;align-items:center;justify-content:center;color:#7f7f7f;font-size:12px}
-    @media(max-width:900px){.partners{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:520px){.partners{grid-template-columns:repeat(2,1fr)}}
-
-    /* Contato */
-    form{display:grid;gap:12px}
-    input,select,textarea{background:#0b0c0b;border:1px solid #1a1a1a;border-radius:12px;padding:12px 14px;color:#fff;font:inherit}
-    input::placeholder,textarea::placeholder{color:#8e8e8e}
-    textarea{min-height:120px;resize:vertical}
-
-    /* Footer */
-    footer{padding:28px 0;border-top:1px solid #101010;color:#bdbdbd}
-
-    /* WhatsApp Floating */
-    .wa-fab{position:fixed;right:18px;bottom:18px;background:var(--green);color:#00220d;border-radius:999px;padding:14px 18px;font-weight:800;box-shadow:0 10px 26px rgba(0,0,0,.45);z-index:60}
-
-    .muted{color:#a9a9a9}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER -->
   <header>
-    <div class="container nav">
-      <a class="logo" href="#inicio" aria-label="Vivari – Início">
-        <!-- Substitua o src abaixo pelo caminho do arquivo do seu logo (ex.: /assets/logo.png). -->
-        <img src="assets/logo.png" alt="Vivari Assessoria Financeira – Logomarca" />
-        <span class="brand">
-          <div class="name">VIVARI</div>
-          <div class="sub">ASSESSORIA FINANCEIRA</div>
-        </span>
-      </a>
-      <nav class="menu" aria-label="Navegação principal">
+    <div class="container">
+      <h1>Vivari Assessoria Financeira</h1>
+      <nav>
+        <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#parcerias">Parcerias</a>
         <a href="#contato">Contato</a>
-        <a class="btn btn-primary" href="https://wa.me/5511983330019?text=Olá,%20gostaria%20de%20uma%20cotação%20de%20seguro" target="_blank" rel="noopener">WhatsApp</a>
-      </nav>
-    </div>
-  </header>
+        <a class="whatsapp" href="https://wa.me/5511983330019">WhatsApp</  <main class="container">
+    <section id="inicio">
+      <h2>Planejamento e confiança</h2>
+      <p>Consórcios para imóveis, automóveis e motocicletas — com a segurança de grandes parceiras.</p>
+      <a class="btn" href="#contato">Solicitar cotação</a>
+    </section>
 
-  <!-- HERO -->
-  <section id="inicio" class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="kicker">Planejamento e confiança</div>
-        <h1>Consórcios para imóveis, automóveis e motocicletas — com a segurança de grandes parceiras</h1>
-        <p class="lead">A Vivari Assessoria Financeira oferece um planejamento acessível e confiável para você e sua família.</p>
-        <div class="cta">
-          <a href="#contato" class="btn btn-primary">Solicitar cotação</a>
-          <a href="https://wa.me/5511983330019?text=Olá,%20gostaria%20de%20informações%20sobre%20seguros" class="btn btn-ghost" target="_blank" rel="noopener">Falar no WhatsApp</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <span class="chip">Atendimento rápido</span>
-        <h3 style="margin:12px 0 8px">Por que a Vivari?</h3>
-        <ul style="margin:0;padding-left:18px;color:#d1d1d1;line-height:1.7">
-          <li>Parcerias com seguradoras e empresas líderes.</li>
-          <li>Assessoria completa: do orçamento ao pós‑venda.</li>
-          <li>Equipe dedicada e comunicação transparente.</li>
-          <li>Planos sob medida para cada necessidade.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre">
-    <div class="container">
+    <section id="sobre">
       <h2>Sobre a Vivari</h2>
-      <p class="subhead">Planejamento e confiança para realizar seus sonhos. Somos uma financeira de consórcios que oferece soluções seguras, transparentes e sob medida para você.</p>
-      <div class="grid cols-3">
-        <div class="card"><h3>Missão</h3><p>Transformar sonhos em conquistas, oferecendo consórcios claros, seguros e adaptados à realidade de cada cliente, com o cuidado e a dedicação de quem trata todos como parte da família.</p></div>
-        <div class="card"><h3>Visão</h3><p>Construir uma história de confiança e realizações, tornando-nos a financeira de consórcio mais lembrada por nosso atendimento próximo, ético e humano, sempre crescendo lado a lado com nossos clientes.</p></div>
-        <div class="card"><h3>Valores</h3><p>Confiança: cada cliente é um relacionamento que cuidamos com respeito e lealdade. Transparência: falar a verdade, sempre, para decisões seguras e conscientes. Acolhimento: atendimento humano, escuta ativa e atenção aos detalhes. Compromisso: dedicação para entregar o melhor em cada negociação. Tradição e Futuro: preservar nossas raízes familiares enquanto inovamos para acompanhar o mercado.</p></div>
-      </div>
-    </div>
-  </section>
+      <p>Somos uma financeira de consórcios que oferece soluções seguras, transparentes e sob medida para você.</p>
+    </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos">
-    <div class="container">
+    <section id="servicos">
       <h2>Nossos Serviços</h2>
-      <p class="subhead">Selecione o tipo de seguro/serviço que você precisa e peça sua cotação.</p>
-      <div class="grid cols-4">
-        <div class="card"><span class="chip">Imóveis</span><h3>Consórcio de Imóvel</h3><p>Casas em geral, apartamento, salas comerciais, fazenda, sítio, chácara, barracões comerciais, galpões, terreno e/ou Construção..</p></div>
-        <div class="card"><span class="chip">Automóveis</span><h3>Consórcio de Automóvel</h3><p>Carros, caminhões, ônibus, vans, auto home, máquinas agrícolas.</p></div>
-        <div class="card"><span class="chip">Motocicletas</span><h3>Consórcio de Motocicleta</h3><p>Motos em geral, jet ski, triciclo e quadriciclo.</p></div>
-        <div class="card"><span class="chip">Outros Bens</span><h3>Consórcio de Outros bens</h3><p>Mobília, móveis planejados, bens móveis duráveis.</p></div>
-        <div class="card"><span class="chip">Serviços</span><h3>Consórcio de Serviço</h3><p>Procedimento odontológicos, procedimentos estéticos, partos, festas, viagens, CNH e etc...</p></div>
-      </div>
-    </div>
-  </section>
+      <ul>
+        <li>Consórcio de Imóvel</li>
+        <li>Consórcio de Automóvel</li>
+        <li>Consórcio de Motocicleta</li>
+        <li>Consórcio de Outros Bens</li>
+        <li>Consórcio de Serviços</li>
+      </ul>
+    </section>
 
-  <!-- PARCERIAS -->
-  <section id="parcerias">
-    <div class="container">
+    <section id="parcerias">
       <h2>Parcerias</h2>
-      <p class="subhead">Trabalhamos com empresas reconhecidas nacionalmente para garantir qualidade e confiabilidade.</p>
-      <div class="partners">
-        <!-- Substitua cada bloco .p por imagens de logos parceiras quando tiver autorização -->
-        <div class="p">Logo Parceira 1</div>
-        <div class="p">Logo Parceira 2</div>
-        <div class="p">Logo Parceira 3</div>
-        <div class="p">Logo Parceira 4</div>
-        <div class="p">Logo Parceira 5</div>
-      </div>
-    </div>
-  </section>
+      <p>Trabalhamos com empresas reconhecidas nacionalmente para garantir qualidade e confiabilidade.</p>
+    </section>
 
-  <!-- CONTATO -->
-  <section id="contato">
-    <div class="container">
+    <section id="contato">
       <h2>Solicite sua Cotação</h2>
-      <p class="subhead">Preencha o formulário e retornaremos por e‑mail ou WhatsApp. Se preferir, fale agora: <a href="https://wa.me/5511983330019" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">(11) 9 8333‑0019</a></p>
-
-      <form id="contactForm">
-        <div class="grid cols-3">
-          <div class="card" style="padding:0;border:none;background:transparent">
-            <label class="sr-only" for="nome">Nome completo</label>
-            <input id="nome" name="nome" placeholder="Nome completo" required />
-          </div>
-          <div class="card" style="padding:0;border:none;background:transparent">
-            <label class="sr-only" for="email">E‑mail</label>
-            <input id="email" type="email" name="email" placeholder="E‑mail" required />
-          </div>
-          <div class="card" style="padding:0;border:none;background:transparent">
-            <label class="sr-only" for="telefone">Telefone / WhatsApp</label>
-            <input id="telefone" name="telefone" placeholder="Telefone / WhatsApp" />
-          </div>
-        </div>
-        <div class="grid cols-3">
-          <div class="card" style="padding:0;border:none;background:transparent">
-            <label class="sr-only" for="tipo">Tipo de seguro/serviço</label>
-            <select id="tipo" name="tipo" required>
-              <option value="" disabled selected>Selecione o tipo de seguro/serviço</option>
-              <option>Seguro Residencial</option>
-              <option>Seguro Automóvel</option>
-              <option>Seguro Motocicleta</option>
-              <option>Serviços Financeiros</option>
-              <option>Outro</option>
-            </select>
-          </div>
-          <div class="card" style="padding:0;border:none;background:transparent">
-            <label class="sr-only" for="cidade">Cidade</label>
-            <input id="cidade" name="cidade" placeholder="Cidade" />
-          </div>
-          <div class="card" style="padding:0;border:none;background:transparent">
-            <label class="sr-only" for="uf">UF</label>
-            <input id="uf" name="uf" placeholder="UF" maxlength="2" />
-          </div>
-        </div>
-        <label class="sr-only" for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco da sua necessidade"></textarea>
-        <div class="cta">
-          <button class="btn btn-primary" type="submit">Enviar</button>
-          <a class="btn btn-ghost" href="mailto:contato@vivari.com.br?subject=Cotação%20de%20Seguro%20–%20Vivari&body=Olá%2C%20equipe%20Vivari..." >Enviar por e‑mail</a>
-        </div>
-        <p id="formStatus" class="muted" style="margin-top:8px"></p>
+      <form>
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="tel" placeholder="Telefone / WhatsApp" required>
+        <textarea placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
       </form>
-
-      <div class="card" style="margin-top:20px">
-        <strong>Preferências de contato</strong>
-        <p style="margin:6px 0 0" class="muted">E‑mail: <a href="mailto:contato@vivari.com.br">contato@vivari.com.br</a> • WhatsApp: <a href="https://wa.me/5511983330019" target="_blank" rel="noopener">(11) 9 8333‑0019</a></p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <div>© <span id="year"></span> Vivari Assessoria Financeira. Todos os direitos reservados.</div>
-      <div class="muted">Cores: fundo preto, textos brancos e acentos verdes, seguindo a identidade da marca.</div>
+    <div class="container">
+      <p>© Vivari Assessoria Financeira. Todos os direitos reservados.</p>
     </div>
   </footer>
-
-  <!-- Botão flutuante WhatsApp -->
-  <a class="wa-fab" href="https://wa.me/5511983330019?text=Olá,%20gostaria%20de%20uma%20cotação%20com%20a%20Vivari" target="_blank" rel="noopener" aria-label="Fale com a Vivari no WhatsApp">WhatsApp</a>
-
-  <script>
-    // Atualiza ano no rodapé
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    /**
-     * Integração com Google Forms
-     * 1) Crie um Google Form com os campos: Nome, E-mail, Telefone, Tipo, Cidade, UF, Mensagem.
-     * 2) Abra o formulário, pressione F12 e localize o atributo action do <form>; copie a URL.
-     * 3) Para cada campo, copie o name gerado (formato entry.xxxxxxxxxx) e preencha abaixo.
-     * 4) Marque GOOGLE_FORMS_ENABLED = true.
-     * Obs.: O envio para Google Forms é feito com fetch no-mode (no-cors). Você verá mensagem de sucesso.
-     */
-
-    const GOOGLE_FORMS_ENABLED = false; // altere para true quando preencher as variáveis abaixo
-    const GOOGLE_FORM_ACTION = ""; // ex.: https://docs.google.com/forms/d/e/FORM_ID/formResponse
-    const FIELDS = {
-      nome: "entry.XXXXXXXXXX",
-      email: "entry.XXXXXXXXXX",
-      telefone: "entry.XXXXXXXXXX",
-      tipo: "entry.XXXXXXXXXX",
-      cidade: "entry.XXXXXXXXXX",
-      uf: "entry.XXXXXXXXXX",
-      mensagem: "entry.XXXXXXXXXX"
-    };
-
-    const form = document.getElementById('contactForm');
-    const statusEl = document.getElementById('formStatus');
-
-    form.addEventListener('submit', async (e)=>{
-      e.preventDefault();
-
-      if (!GOOGLE_FORMS_ENABLED || !GOOGLE_FORM_ACTION){
-        statusEl.textContent = 'Envio via Google Forms ainda não configurado. Use o botão “Enviar por e‑mail” ou fale no WhatsApp.';
-        statusEl.style.color = '#f5c542';
-        return;
-      }
-
-      const data = new FormData();
-      data.append(FIELDS.nome, form.nome.value);
-      data.append(FIELDS.email, form.email.value);
-      data.append(FIELDS.telefone, form.telefone.value);
-      data.append(FIELDS.tipo, form.tipo.value);
-      data.append(FIELDS.cidade, form.cidade.value);
-      data.append(FIELDS.uf, form.uf.value);
-      data.append(FIELDS.mensagem, form.mensagem.value);
-
-      try{
-        await fetch(GOOGLE_FORM_ACTION, { method:'POST', mode:'no-cors', body:data });
-        form.reset();
-        statusEl.textContent = '✅ Enviado com sucesso! Em breve entraremos em contato.';
-        statusEl.style.color = 'var(--green)';
-      }catch(err){
-        statusEl.textContent = 'Não foi possível enviar agora. Por favor, tente novamente ou use o WhatsApp.';
-        statusEl.style.color = '#ff6b6b';
-      }
-    });
-  </script>
 </body>
 </html>
