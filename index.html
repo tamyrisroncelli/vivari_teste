@@ -1,65 +1,368 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vivari Assessoria Financeira</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivari Assessoria Financeira - Consórcios com Confiança</title>
+    <meta name="description" content="Consórcios para imóveis, automóveis e motocicletas com planejamento e confiança. A Vivari oferece soluções seguras e transparentes para realizar seus sonhos.">
+    <meta name="keywords" content="consórcio, imóveis, automóveis, motocicletas, financiamento, planejamento financeiro, vivari">
+    <meta name="author" content="Vivari Assessoria Financeira">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vivari Assessoria Financeira - Consórcios com Confiança">
+    <meta property="og:description" content="Consórcios para imóveis, automóveis e motocicletas com planejamento e confiança. Assessoria completa e transparente.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Vivari Assessoria Financeira</h1>
-      <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#parcerias">Parcerias</a>
-        <a href="#contato">Contato</a>
-        <a class="whatsapp" href="https://wa.me/5511983330019">WhatsApp</  <main class="container">
-    <section id="inicio">
-      <h2>Planejamento e confiança</h2>
-      <p>Consórcios para imóveis, automóveis e motocicletas — com a segurança de grandes parceiras.</p>
-      <a class="btn" href="#contato">Solicitar cotação</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="vivari-logo.png" alt="Vivari Assessoria Financeira" class="logo">
+                    <div class="logo-text">
+                        <h1>Vivari</h1>
+                        <p>Assessoria Financeira</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://wa.me/5511983330019?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20consórcios%20da%20Vivari%20Assessoria%20Financeira." 
+                       class="btn btn-whatsapp" target="_blank">
+                        <i data-lucide="message-circle"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Planejamento e <span class="highlight">Confiança</span></h1>
+            <p class="subtitle">Consórcios para imóveis, automóveis e motocicletas — com a segurança de grandes parceiras</p>
+            <p class="description">A Vivari Assessoria Financeira oferece um planejamento acessível e confiável para você e sua família.</p>
+            
+            <div class="hero-buttons">
+                <a href="#cotacao" class="btn btn-primary">Solicitar Cotação</a>
+                <a href="https://wa.me/5511983330019?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20consórcios%20da%20Vivari%20Assessoria%20Financeira." 
+                   class="btn btn-whatsapp" target="_blank">
+                    <i data-lucide="message-circle"></i>
+                    Falar no WhatsApp
+                </a>
+            </div>
+            
+            <p class="quick-note">✓ Atendimento rápido</p>
+        </div>
     </section>
 
-    <section id="sobre">
-      <h2>Sobre a Vivari</h2>
-      <p>Somos uma financeira de consórcios que oferece soluções seguras, transparentes e sob medida para você.</p>
+    <!-- Por que a Vivari -->
+    <section class="section-padding section-light">
+        <div class="container">
+            <h2 class="section-title">Por que a Vivari?</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i data-lucide="users" class="icon"></i>
+                    </div>
+                    <h3>Parcerias Sólidas</h3>
+                    <p>Parcerias com seguradoras e empresas líderes.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i data-lucide="check-circle" class="icon"></i>
+                    </div>
+                    <h3>Assessoria Completa</h3>
+                    <p>Assessoria completa: do orçamento ao pós‑venda.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i data-lucide="shield" class="icon"></i>
+                    </div>
+                    <h3>Equipe Dedicada</h3>
+                    <p>Equipe dedicada e comunicação transparente.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i data-lucide="heart" class="icon"></i>
+                    </div>
+                    <h3>Planos Personalizados</h3>
+                    <p>Planos sob medida para cada necessidade.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="servicos">
-      <h2>Nossos Serviços</h2>
-      <ul>
-        <li>Consórcio de Imóvel</li>
-        <li>Consórcio de Automóvel</li>
-        <li>Consórcio de Motocicleta</li>
-        <li>Consórcio de Outros Bens</li>
-        <li>Consórcio de Serviços</li>
-      </ul>
+    <!-- Sobre a Vivari -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Sobre a Vivari</h2>
+                    <p>Planejamento e confiança para realizar seus sonhos. Somos uma financeira de consórcios que oferece soluções seguras, transparentes e sob medida para você.</p>
+                    
+                    <div class="values-section">
+                        <h3>Missão</h3>
+                        <p>Transformar sonhos em conquistas, oferecendo consórcios claros, seguros e adaptados à realidade de cada cliente, com o cuidado e a dedicação de quem trata todos como parte da família.</p>
+                    </div>
+                    
+                    <div class="values-section">
+                        <h3>Visão</h3>
+                        <p>Construir uma história de confiança e realizações, tornando-nos a financeira de consórcio mais lembrada por nosso atendimento próximo, ético e humano, sempre crescendo lado a lado com nossos clientes.</p>
+                    </div>
+                    
+                    <div class="values-section">
+                        <h3>Valores</h3>
+                        <ul>
+                            <li><strong>Confiança:</strong> cada cliente é um relacionamento que cuidamos com respeito e lealdade.</li>
+                            <li><strong>Transparência:</strong> falar a verdade, sempre, para decisões seguras e conscientes.</li>
+                            <li><strong>Acolhimento:</strong> atendimento humano, escuta ativa e atenção aos detalhes.</li>
+                            <li><strong>Compromisso:</strong> dedicação para entregar o melhor em cada negociação.</li>
+                            <li><strong>Tradição e Futuro:</strong> preservar nossas raízes familiares enquanto inovamos para acompanhar o mercado.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Entre em Contato</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>(11) 9 8333‑0019</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="message-circle"></i>
+                            <span>WhatsApp Direto</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>Retorno por Email</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5511983330019?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20consórcios%20da%20Vivari%20Assessoria%20Financeira." 
+                       class="btn" style="background: white; color: var(--primary-green);" target="_blank">
+                        Falar Agora
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="parcerias">
-      <h2>Parcerias</h2>
-      <p>Trabalhamos com empresas reconhecidas nacionalmente para garantir qualidade e confiabilidade.</p>
+    <!-- Nossos Serviços -->
+    <section class="section-padding section-light">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p style="text-align: center; font-size: 18px; color: var(--gray-medium); margin-bottom: 64px;">
+                Selecione o tipo de consórcio que você precisa e peça sua cotação.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="home" class="icon"></i>
+                    </div>
+                    <h3>Imóveis</h3>
+                    <p class="service-subtitle">Consórcio de Imóvel</p>
+                    <p>Casas em geral, apartamento, salas comerciais, fazenda, sítio, chácara, barracões comerciais, galpões, terreno e/ou Construção.</p>
+                    <a href="#cotacao" class="btn btn-outline">Solicitar Cotação</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="car" class="icon"></i>
+                    </div>
+                    <h3>Automóveis</h3>
+                    <p class="service-subtitle">Consórcio de Automóvel</p>
+                    <p>Carros, caminhões, ônibus, vans, auto home, máquinas agrícolas.</p>
+                    <a href="#cotacao" class="btn btn-outline">Solicitar Cotação</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="bike" class="icon"></i>
+                    </div>
+                    <h3>Motocicletas</h3>
+                    <p class="service-subtitle">Consórcio de Motocicleta</p>
+                    <p>Motos em geral, jet ski, triciclo e quadriciclo.</p>
+                    <a href="#cotacao" class="btn btn-outline">Solicitar Cotação</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="package" class="icon"></i>
+                    </div>
+                    <h3>Outros Bens</h3>
+                    <p class="service-subtitle">Consórcio de Outros bens</p>
+                    <p>Mobília, móveis planejados, bens móveis duráveis.</p>
+                    <a href="#cotacao" class="btn btn-outline">Solicitar Cotação</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="wrench" class="icon"></i>
+                    </div>
+                    <h3>Serviços</h3>
+                    <p class="service-subtitle">Consórcio de Serviço</p>
+                    <p>Procedimento odontológicos, procedimentos estéticos, partos, festas, viagens, CNH e etc...</p>
+                    <a href="#cotacao" class="btn btn-outline">Solicitar Cotação</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contato">
-      <h2>Solicite sua Cotação</h2>
-      <form>
-        <input type="text" placeholder="Nome completo" required>
-        <input type="email" placeholder="E-mail" required>
-        <input type="tel" placeholder="Telefone / WhatsApp" required>
-        <textarea placeholder="Mensagem"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+    <!-- Parcerias -->
+    <section class="section-padding">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Parcerias</h2>
+            <p style="font-size: 18px; color: var(--gray-medium); margin-bottom: 48px;">
+                Trabalhamos com empresas reconhecidas nacionalmente para garantir qualidade e confiabilidade.
+            </p>
+            <div class="partners-grid">
+                <div class="partner-logo">Logo Parceira 1</div>
+                <div class="partner-logo">Logo Parceira 2</div>
+                <div class="partner-logo">Logo Parceira 3</div>
+                <div class="partner-logo">Logo Parceira 4</div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>© Vivari Assessoria Financeira. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+    <!-- Formulário de Cotação -->
+    <section id="cotacao" class="section-padding form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">Solicite sua Cotação</h2>
+                <p class="form-subtitle">Preencha o formulário e retornaremos por e‑mail ou WhatsApp.</p>
+                <p class="form-contact-info">Se preferir, fale agora: <strong>(11) 9 8333‑0019</strong></p>
+                
+                <div class="form-card">
+                    <form>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Nome Completo</label>
+                                <input type="text" class="form-input" placeholder="Seu nome completo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Telefone/WhatsApp</label>
+                                <input type="tel" class="form-input" placeholder="(11) 9 9999-9999" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">E-mail</label>
+                                <input type="email" class="form-input" placeholder="seu@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Tipo de Consórcio</label>
+                                <select class="form-select" required>
+                                    <option value="">Selecione o tipo</option>
+                                    <option value="imoveis">Imóveis</option>
+                                    <option value="automoveis">Automóveis</option>
+                                    <option value="motocicletas">Motocicletas</option>
+                                    <option value="outros-bens">Outros Bens</option>
+                                    <option value="servicos">Serviços</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label class="form-label">Mensagem (Opcional)</label>
+                                <textarea class="form-textarea" placeholder="Conte-nos mais sobre o que você precisa..."></textarea>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <button type="submit" class="btn btn-primary form-submit">Enviar Solicitação</button>
+                                <p class="form-note">Responderemos em até 2 horas durante horário comercial</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="vivari-logo.png" alt="Vivari">
+                        <div class="footer-brand">
+                            <h3>Vivari</h3>
+                            <p>Assessoria Financeira</p>
+                        </div>
+                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.8);">
+                        Planejamento e confiança para realizar seus sonhos.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li>Consórcio de Imóveis</li>
+                        <li>Consórcio de Automóveis</li>
+                        <li>Consórcio de Motocicletas</li>
+                        <li>Outros Bens</li>
+                        <li>Serviços</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div style="margin-bottom: 24px;">
+                        <p>(11) 9 8333‑0019</p>
+                        <p>WhatsApp Direto</p>
+                    </div>
+                    <a href="https://wa.me/5511983330019?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20consórcios%20da%20Vivari%20Assessoria%20Financeira." 
+                       class="btn" style="background: white; color: var(--primary-green);" target="_blank">
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vivari Assessoria Financeira. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+        
+        // Smooth scroll para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
